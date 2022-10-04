@@ -3,7 +3,7 @@ const fs = require('fs');
 const { mainModule } = require('process');
 
 //https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-desktop-amd64.iso
-const index = 0;
+let index = 0;
 const links = [
     "https://dls.tabanmusic.com/music/2022/07/17/nohe-marof-moharam-remix(tabanmusic.com).mp3",
     "https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-desktop-amd64.iso",
