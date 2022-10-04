@@ -5,6 +5,7 @@ const { mainModule } = require('process');
 //https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-desktop-amd64.iso
 const index = 0;
 const links = [
+    "https://dls.tabanmusic.com/music/2022/07/17/nohe-marof-moharam-remix(tabanmusic.com).mp3",
     "https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-desktop-amd64.iso",
     "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.5.0-amd64-netinst.iso",
     "https://download.fedoraproject.org/pub/fedora/linux/releases/36/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-36-1.5.iso",
@@ -25,6 +26,7 @@ async function main() {
 
     const request = http.get(links[index], function (response) {
         response.pipe(file);
+        console.log("start Download " + index);
         file.on("finish", async () => {
             file.close();
             console.log("Download Completed");
